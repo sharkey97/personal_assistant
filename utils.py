@@ -9,6 +9,8 @@ def startTimer(pomTime, pomBreak):
     pomTimeSeconds = pomTime * 60
     pomBreakSeconds = pomBreak * 60
 
+    workSegmentCounter = 1
+
     while True:
         # Pomodoro time
         for remaining in range(pomTimeSeconds, 0, -1):
@@ -20,10 +22,9 @@ def startTimer(pomTime, pomBreak):
             percentBarCounter = int((percentComplete / 100) * bar_length)
             percentBar = '#' * percentBarCounter + '-' * (bar_length - percentBarCounter)
             
-            print(f"Time left: {timer} | Progress: {percentComplete:.2f}% | [{percentBar}]", end="\r")
+            print(f"\033[KTime left: {timer} | Progress: {percentComplete:.2f}% | [{percentBar}]", end="\r")
             time.sleep(1)
-
-        print()  # Move to the next line after pomodoro time
+        print(f"\033[KTime left: 00:00 | Progress: 100% | Work Segment {workSegmentCounter} Complete")
 
         # Break time
         for remaining in range(pomBreakSeconds, 0, -1):
@@ -35,7 +36,8 @@ def startTimer(pomTime, pomBreak):
             percentBarCounter = int((percentComplete / 100) * bar_length)
             percentBar = '#' * percentBarCounter + '-' * (bar_length - percentBarCounter)
             
-            print(f"Break left: {timer} | Progress: {percentComplete:.2f}% | [{percentBar}]", end="\r")
+            print(f"\033[KBreak left: {timer} | Progress: {percentComplete:.2f}% | [{percentBar}]", end="\r")
             time.sleep(1)
+        print(f"\033[KBreak left: 00:00 | Progress: 100% | Break Segment {workSegmentCounter} Complete")
 
-        print()  # Move to the next line after break time
+        workSegmentCounter +=1
