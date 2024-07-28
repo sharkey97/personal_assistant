@@ -2,12 +2,13 @@
 
 ### Initial setup
 
-`python -m venv venv`
+*Make sure to give the script execution permissions by running the following command in your terminal:*
+`chmod +x setup.sh`
 
-`venv\Scripts\activate`
+*Execute the setup script*
+`setup.sh`
 
-`pip install -r requirements.txt`
-
+*Run The Program*
 `python main.py`
 
 ### Run on Boot
