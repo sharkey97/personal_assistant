@@ -1,10 +1,14 @@
 #!/bin/bash
 
+echo "Setup starting..."
+
 # Create a virtual environment
 python -m venv venv
 
 # Activate the virtual environment
-source venv/bin/activate
+source venv/Scripts/activate
+# If running these commands individually, run the below instead
+# source venv/Scripts/activate
 
 # Install dependencies
 pip install -r requirements.txt
