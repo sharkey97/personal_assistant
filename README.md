@@ -5,8 +5,8 @@
 *Make sure to give the script execution permissions by running the following command in your terminal:*
 `chmod +x setup.sh`
 
-*Execute the setup script*
-`setup.sh`
+*Execute the setup script in a Git Bash terminal*
+`.\setup.sh`
 
 *Run The Program*
 `python main.py`
