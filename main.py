@@ -54,6 +54,7 @@ def startProgram():
             print("Invalid choice, please try again.")
         
         continue_choice = input("Do you want to choose another task? (yes/no): ").strip().lower()
+        clear()
         if continue_choice != 'yes':
             print("Shutting down program...")
             time.sleep(3)
