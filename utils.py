@@ -24,7 +24,7 @@ def startTimer(pomTime, pomBreak):
             
             print(f"\033[KTime left: {timer} | Progress: {percentComplete:.2f}% | [{percentBar}]", end="\r")
             time.sleep(1)
-        print(f"\033[KTime left: 00:00 | Progress: 100% | Work Segment {workSegmentCounter} Complete")
+        print(f"\033[KTime left: 00:00 | Progress: 100% | \033[32mWork Segment {workSegmentCounter} Complete\033[m")
 
         # Break time
         for remaining in range(pomBreakSeconds, 0, -1):
@@ -38,6 +38,6 @@ def startTimer(pomTime, pomBreak):
             
             print(f"\033[KBreak left: {timer} | Progress: {percentComplete:.2f}% | [{percentBar}]", end="\r")
             time.sleep(1)
-        print(f"\033[KBreak left: 00:00 | Progress: 100% | Break Segment {workSegmentCounter} Complete")
+        print(f"\033[KBreak left: 00:00 | Progress: 100% | \033[32mBreak Segment {workSegmentCounter} Complete\033[m")
 
         workSegmentCounter +=1
