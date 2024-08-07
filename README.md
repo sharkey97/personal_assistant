@@ -1,5 +1,6 @@
 # Personal Assistant
-
+---
+Dynamic task loading with simple CLI interface. Allows for unlimited subtasks to be created and accessed from a single program.
 ### Initial setup
 
 *Make sure to give the script execution permissions by running the following command in your terminal:*
